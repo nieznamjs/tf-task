@@ -1,0 +1,44 @@
+@import "variables";
+@import "colors";
+
+.field {
+  position: relative;
+
+  input {
+    width: 100%;
+    height: 32px;
+    margin: 0;
+    padding: 0 5px;
+    font-size: 16px;
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid $gray-dark;
+    transition-duration: $general-transition-duration;
+
+    &:focus {
+      border-color: $primary-color;
+    }
+
+    &.error {
+      border-color: $error-color;
+    }
+  }
+}
+
+.btn {
+  border: none;
+  outline: none;
+  height: 32px;
+  padding: 0 20px;
+  cursor: pointer;
+  border-radius: $general-border-radius;
+  box-shadow: $general-shadow;
+  background-color: $primary-color;
+  color: $gray-light;
+  transition-duration: $general-transition-duration;
+
+  &:hover {
+    background-color: $primary-light-color;
+  }
+}

@@ -1,0 +1,15 @@
+@import "fonts";
+@import "colors";
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  background-color: $gray-light;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: $font-lato;
+  color: $font-primary-color;
+}

@@ -1,0 +1,36 @@
+@import "src/styles/colors";
+@import "src/styles/variables";
+
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100px;
+  background-color: $gray;
+  box-shadow: $general-shadow;
+}
+
+.field--search {
+  max-width: 350px;
+  width: 100%;
+}
+
+.btn--submit {
+  margin-left: 20px;
+}
+
+.error-message {
+  position: absolute;
+  display: block;
+  margin-top: 5px;
+  padding: 0 5px;
+  color: $error-color;
+  font-size: 12px;
+  opacity: 0;
+  transition-duration: $general-transition-duration;
+
+  &.visible {
+    opacity: 1;
+  }
+}

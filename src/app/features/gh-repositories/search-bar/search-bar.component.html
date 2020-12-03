@@ -1,0 +1,18 @@
+<form class="form" [formGroup]="form" (ngSubmit)="submit()">
+  <div class="field field--search">
+    <input
+      type="text"
+      placeholder="Github username"
+      formControlName="username"
+      [class.error]="formsService.hasError(form, 'username')"
+    />
+
+    <span class="error-message" [class.visible]="formsService.hasError(form, 'username')">
+      Username can not be empty
+    </span>
+  </div>
+
+  <button class="btn btn--submit">
+    Find
+  </button>
+</form>
