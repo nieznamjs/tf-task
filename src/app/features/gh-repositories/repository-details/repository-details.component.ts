@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 import { RepositoryWithBranches } from '../../../shared/interfaces';
 
@@ -7,13 +7,7 @@ import { RepositoryWithBranches } from '../../../shared/interfaces';
   templateUrl: './repository-details.component.html',
   styleUrls: ['./repository-details.component.scss']
 })
-export class RepositoryDetailsComponent implements OnInit {
+export class RepositoryDetailsComponent {
 
   @Input() public repositoryDetails!: RepositoryWithBranches;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
 }

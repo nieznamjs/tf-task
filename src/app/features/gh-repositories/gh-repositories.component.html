@@ -1,5 +1,21 @@
-<app-search-bar [isLoading]="isLoading$ | async" (formSubmitted)="onFormSubmit($event)"></app-search-bar>
+<app-search-bar [isLoading]="(isLoading$ | async)!" (formSubmitted)="onFormSubmit($event)"></app-search-bar>
 
-<app-repository-details *ngFor="let repository of repositories$ | async" [repositoryDetails]="repository"></app-repository-details>
+<app-loader *ngIf="isLoading$ | async" size="50"></app-loader>
 
-<app-loader *ngIf="isLoading$ | async" size="30"></app-loader>
+<ng-container *ngIf="!(isLoading$ | async)">
+  <ul class="repositories-list">
+    <li class="repositories-list__item" *ngFor="let repository of repositories">
+      <app-repository-details [repositoryDetails]="repository"></app-repository-details>
+    </li>
+  </ul>
+
+  <div class="error" *ngIf="(errorResponse$ | async) as error">
+    <p *ngIf="error.status === 404; else generalError">User not found.</p>
+
+    <ng-template #generalError>
+      <p>An error occurred, try again later.</p>
+
+      <p>Error details: {{ error.status }} {{ error.statusText }}</p>
+    </ng-template>
+  </div>
+</ng-container>

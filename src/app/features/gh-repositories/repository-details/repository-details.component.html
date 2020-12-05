@@ -1,1 +1,19 @@
-<p>repository-details works!</p>
+<div class="repository-wrapper">
+  <h4 class="repository-name heading-5">
+    Repository name: {{ repositoryDetails.name }}
+  </h4>
+
+  <p class="repository-owner">
+    Owner: {{ repositoryDetails.owner.login }}
+  </p>
+
+  <p class="branches-label">
+    Branches:
+  </p>
+
+  <ul class="branches-list">
+    <li *ngFor="let branch of repositoryDetails?.branches">
+      <app-branch-details [branch]="branch"></app-branch-details>
+    </li>
+  </ul>
+</div>

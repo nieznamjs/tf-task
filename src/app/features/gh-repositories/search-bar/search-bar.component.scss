@@ -1,7 +1,16 @@
 @import "src/styles/colors";
 @import "src/styles/variables";
 
+:host {
+  display: block;
+  width: 100%;
+  margin-bottom: 50px;
+}
+
 .form {
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: center;
   align-items: center;

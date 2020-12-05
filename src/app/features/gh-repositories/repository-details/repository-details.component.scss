@@ -1,0 +1,9 @@
+@import "src/styles/variables";
+@import "src/styles/colors";
+
+.repository-wrapper {
+  width: 100%;
+  padding: 20px;
+  box-shadow: $general-shadow;
+  background-color: $gray;
+}
