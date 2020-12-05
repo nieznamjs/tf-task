@@ -1,8 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 import { FormsService } from '../../../core/services/forms.service';
-import { GithubDataService } from '../../../core/services/github-data.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -10,11 +9,14 @@ import { GithubDataService } from '../../../core/services/github-data.service';
   styleUrls: ['./search-bar.component.scss']
 })
 export class SearchBarComponent implements OnInit {
+  @Input() public isLoading!: boolean;
+
+  @Output() public formSubmitted = new EventEmitter<string>();
+
   public form!: FormGroup;
 
   constructor(
     private fb: FormBuilder,
-    private githubDataService: GithubDataService,
     public formsService: FormsService,
   ) {}
 
@@ -31,10 +33,7 @@ export class SearchBarComponent implements OnInit {
 
     const { username } = this.form.getRawValue();
 
-    this.githubDataService.getUsersRepositories(username)
-      .subscribe(data => {
-        console.log(data)
-      });
+    this.formSubmitted.emit(username);
   }
 
   private createForm(): FormGroup {

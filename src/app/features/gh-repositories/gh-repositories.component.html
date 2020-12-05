@@ -1,1 +1,5 @@
-<app-search-bar></app-search-bar>
+<app-search-bar [isLoading]="isLoading$ | async" (formSubmitted)="onFormSubmit($event)"></app-search-bar>
+
+<app-repository-details *ngFor="let repository of repositories$ | async" [repositoryDetails]="repository"></app-repository-details>
+
+<app-loader *ngIf="isLoading$ | async" size="30"></app-loader>

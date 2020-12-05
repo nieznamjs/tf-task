@@ -4,15 +4,16 @@
       type="text"
       placeholder="Github username"
       formControlName="username"
-      [class.error]="formsService.hasError(form, 'username')"
-    />
+      [class.error]="formsService.hasError(form, 'username')" />
 
     <span class="error-message" [class.visible]="formsService.hasError(form, 'username')">
       Username can not be empty
     </span>
   </div>
 
-  <button class="btn btn--submit">
+  <button class="btn btn--submit" [disabled]="isLoading">
     Find
+
+    <app-loader *ngIf="isLoading" [size]="18"></app-loader>
   </button>
 </form>

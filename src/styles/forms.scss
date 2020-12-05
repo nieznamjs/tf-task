@@ -27,6 +27,9 @@
 }
 
 .btn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   border: none;
   outline: none;
   height: 32px;
@@ -40,5 +43,9 @@
 
   &:hover {
     background-color: $primary-light-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
   }
 }
