@@ -1,16 +1,21 @@
 import { TestBed } from '@angular/core/testing';
 
 import { GithubDataService } from './github-data.service';
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 
 describe('GithubDataService', () => {
-  let service: GithubDataService;
+  let githubDataService: GithubDataService;
 
   beforeEach(() => {
-    TestBed.configureTestingModule({});
-    service = TestBed.inject(GithubDataService);
+    TestBed.configureTestingModule({
+      providers: [ GithubDataService, HttpClientTestingModule ],
+    });
+    githubDataService = TestBed.inject(GithubDataService);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
-  });
+  // describe('filterForkedRepos()', () => {
+  //   it ('should filter forked repos', () => {
+  //
+  //   });
+  // });
 });

@@ -3,10 +3,10 @@ import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http'
 import { catchError, finalize, map, mergeMap } from 'rxjs/operators';
 import { BehaviorSubject, forkJoin, Observable, of, throwError } from 'rxjs';
 
-import { GithubRepositoryTypes } from '../../shared/constants/github-repository-types';
-import { RepositoryWithBranches, Branch, Repository } from '../../shared/interfaces';
+import { GithubRepositoryTypes } from '../../shared/constants';
+import { RepositoryWithBranches, Branch, RepositoryResponse, Repository } from '../../shared/interfaces';
 
-import * as mockedRepositories from './repositories-mock.json';
+import * as mockedRepositories from '../../../mocks/repositories-mock.json';
 
 @Injectable({
   providedIn: 'root',
@@ -28,13 +28,15 @@ export class GithubDataService {
     // this.isLoading$.next(false);
     // return of(mockedRepositories.default);
 
-    return this.http.get<Repository[]>(`${this.githubApiUrl}/users/${username}/repos`, { params })
+    return this.http.get<RepositoryResponse[]>(`${this.githubApiUrl}/users/${username}/repos`, { params })
       .pipe(
-        map(repos => repos.filter(repo => !repo.fork)),
-        mergeMap(filteredRepos => {
+        map(this.filterForkedRepos),
+        mergeMap((filteredRepos: RepositoryResponse[]) => {
+          const mappedAndFilteredRepos: Repository[] = filteredRepos.map(repo => this.mapRepository(repo));
+
           return forkJoin(
-            filteredRepos.map(repo => {
-              const correctBranchesUrl = repo.branches_url.split('{/')[0];
+            mappedAndFilteredRepos.map(repo => {
+              const correctBranchesUrl = repo.branchesUrl.split('{/')[0];
               this.errorResponse$.next(null);
 
               return this.getBranches(correctBranchesUrl).pipe(
@@ -53,6 +55,19 @@ export class GithubDataService {
         }),
         finalize(() => this.isLoading$.next(false))
       );
+  }
+
+  private mapRepository(repositoryResponse: RepositoryResponse): Repository {
+    return {
+      fork: repositoryResponse.fork,
+      name: repositoryResponse.name,
+      owner: repositoryResponse.owner,
+      branchesUrl: repositoryResponse.branches_url,
+    };
+  }
+
+  private filterForkedRepos(repos: RepositoryResponse[]): RepositoryResponse[] {
+    return repos.filter(repo => !repo.fork);
   }
 
   private getBranches(branchesUrl: string): Observable<Branch[]> {

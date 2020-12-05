@@ -8,6 +8,5 @@ import { RepositoryWithBranches } from '../../../shared/interfaces';
   styleUrls: ['./repository-details.component.scss']
 })
 export class RepositoryDetailsComponent {
-
   @Input() public repositoryDetails!: RepositoryWithBranches;
 }

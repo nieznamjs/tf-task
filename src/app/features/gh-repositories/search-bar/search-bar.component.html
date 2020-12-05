@@ -4,10 +4,10 @@
       type="text"
       placeholder="Github username"
       formControlName="username"
-      [class.error]="formsService.hasError(form, 'username')" />
+      [class.error]="formsService.hasError(form, 'username', 'request')" />
 
-    <span class="error-message" [class.visible]="formsService.hasError(form, 'username')">
-      Username can not be empty
+    <span class="error-message" [class.visible]="formsService.hasError(form, 'username', 'required')">
+      Username cannot be empty
     </span>
   </div>
 

@@ -16,8 +16,6 @@ const featureModules = [ GhRepositoriesModule ];
     ReactiveFormsModule,
     ...featureModules,
   ],
-  exports: [
-    ...featureModules,
-  ],
+  exports: [ ...featureModules ],
 })
 export class CoreModule { }

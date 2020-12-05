@@ -11,7 +11,7 @@ import { FormsService } from '../../../core/services/forms.service';
 export class SearchBarComponent implements OnInit {
   @Input() public isLoading!: boolean;
 
-  @Output() public formSubmitted = new EventEmitter<string>();
+  @Output() public search = new EventEmitter<string>();
 
   public form!: FormGroup;
 
@@ -33,7 +33,7 @@ export class SearchBarComponent implements OnInit {
 
     const { username } = this.form.getRawValue();
 
-    this.formSubmitted.emit(username);
+    this.search.emit(username);
   }
 
   private createForm(): FormGroup {

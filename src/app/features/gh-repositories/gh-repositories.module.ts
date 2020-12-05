@@ -9,14 +9,17 @@ import { RepositoryDetailsComponent } from './repository-details/repository-deta
 import { BranchDetailsComponent } from './repository-details/branch-details/branch-details.component';
 
 @NgModule({
-  declarations: [ GhRepositoriesComponent, SearchBarComponent, RepositoryDetailsComponent, BranchDetailsComponent ],
+  declarations: [
+    GhRepositoriesComponent,
+    SearchBarComponent,
+    RepositoryDetailsComponent,
+    BranchDetailsComponent,
+  ],
   imports: [
     CommonModule,
     ReactiveFormsModule,
     SharedModule,
   ],
-  exports: [
-    GhRepositoriesComponent,
-  ],
+  exports: [ GhRepositoriesComponent ],
 })
 export class GhRepositoriesModule { }

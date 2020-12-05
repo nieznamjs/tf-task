@@ -5,9 +5,9 @@ import { FormGroup } from '@angular/forms';
   providedIn: 'root'
 })
 export class FormsService {
-  public hasError(form: FormGroup, controlName: string): boolean {
+  public hasError(form: FormGroup, controlName: string, errorName: string): boolean {
     const control = form.get(controlName);
 
-    return !!((control?.touched || control?.dirty) && control.invalid);
+    return !!((control?.touched || control?.dirty) && control.hasError(errorName));
   }
 }

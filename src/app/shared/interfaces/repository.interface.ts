@@ -1,8 +1,5 @@
-export interface Repository {
-  fork: boolean;
-  name: string;
-  owner: {
-    login: string;
-  };
-  branches_url: string;
+import { RepositoryResponse } from './http';
+
+export interface Repository extends Omit<RepositoryResponse, 'branches_url'> {
+  branchesUrl: string;
 }

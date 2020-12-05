@@ -1,9 +1,9 @@
-<app-search-bar [isLoading]="(isLoading$ | async)!" (formSubmitted)="onFormSubmit($event)"></app-search-bar>
+<app-search-bar [isLoading]="(isLoading$ | async)!" (search)="onSearch($event)"></app-search-bar>
 
-<app-loader *ngIf="isLoading$ | async" size="50"></app-loader>
+<app-loader *ngIf="(isLoading$ | async); else notLoading" size="50"></app-loader>
 
-<ng-container *ngIf="!(isLoading$ | async)">
-  <ul class="repositories-list">
+<ng-template #notLoading>
+  <ul class="repositories-list" *ngIf="!(errorResponse$ | async)">
     <li class="repositories-list__item" *ngFor="let repository of repositories">
       <app-repository-details [repositoryDetails]="repository"></app-repository-details>
     </li>
@@ -18,4 +18,4 @@
       <p>Error details: {{ error.status }} {{ error.statusText }}</p>
     </ng-template>
   </div>
-</ng-container>
+</ng-template>

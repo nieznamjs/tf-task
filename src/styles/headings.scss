@@ -1,42 +1,42 @@
 @import "variables";
 
 .heading-1 {
-  font-size: 36px;
+  font-size: 32px;
 
-  @media (max-width: $screen-M) {
-    font-size: 32px;
+  @media (min-width: $screen-M) {
+    font-size: 36px;
   }
 }
 
 .heading-2 {
-  font-size: 32px;
+  font-size: 28px;
 
-  @media (max-width: $screen-M) {
-    font-size: 28px;
+  @media (min-width: $screen-M) {
+    font-size: 32px;
   }
 }
 
 .heading-3 {
-  font-size: 26px;
+  font-size: 22px;
 
-  @media (max-width: $screen-M) {
-    font-size: 22px;
+  @media (min-width: $screen-M) {
+    font-size: 26px;
   }
 }
 
 .heading-4 {
-  font-size: 22px;
+  font-size: 20px;
 
-  @media (max-width: $screen-M) {
-    font-size: 20px;
+  @media (min-width: $screen-M) {
+    font-size: 22px;
   }
 }
 
 .heading-5 {
-  font-size: 18px;
+  font-size: 16px;
 
-  @media (max-width: $screen-M) {
-    font-size: 16px;
+  @media (min-width: $screen-M) {
+    font-size: 18px;
   }
 }
 

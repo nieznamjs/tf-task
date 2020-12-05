@@ -24,7 +24,7 @@ export class GhRepositoriesComponent implements OnInit {
     this.errorResponse$ = this.githubDataService.errorResponse$;
   }
 
-  public onFormSubmit(username: string): void {
+  public onSearch(username: string): void {
     this.githubDataService.getUsersRepositoriesWithBranches(username)
       .pipe(take(1))
       .subscribe(repositories => {
