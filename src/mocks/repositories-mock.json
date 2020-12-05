@@ -91,17 +91,7 @@
     "forks": 0,
     "open_issues": 0,
     "watchers": 0,
-    "default_branch": "master",
-    "branches": [
-      {
-        "name": "master",
-        "commit": {
-          "sha": "92130bc31481d2559b42ecb98b65231a28fba455",
-          "url": "https://api.github.com/repos/nieznamjs/counters-app/commits/92130bc31481d2559b42ecb98b65231a28fba455"
-        },
-        "protected": false
-      }
-    ]
+    "default_branch": "master"
   },
   {
     "id": 168021941,
@@ -131,7 +121,7 @@
     },
     "html_url": "https://github.com/nieznamjs/firstIonic",
     "description": null,
-    "fork": false,
+    "fork": true,
     "url": "https://api.github.com/repos/nieznamjs/firstIonic",
     "forks_url": "https://api.github.com/repos/nieznamjs/firstIonic/forks",
     "keys_url": "https://api.github.com/repos/nieznamjs/firstIonic/keys{/key_id}",
@@ -195,17 +185,7 @@
     "forks": 0,
     "open_issues": 0,
     "watchers": 0,
-    "default_branch": "master",
-    "branches": [
-      {
-        "name": "master",
-        "commit": {
-          "sha": "610465ceb06fc0a4aed8aef72ea606278c55ce75",
-          "url": "https://api.github.com/repos/nieznamjs/firstIonic/commits/610465ceb06fc0a4aed8aef72ea606278c55ce75"
-        },
-        "protected": false
-      }
-    ]
+    "default_branch": "master"
   },
   {
     "id": 171867367,
@@ -305,72 +285,6 @@
     "forks": 0,
     "open_issues": 0,
     "watchers": 0,
-    "default_branch": "master",
-    "branches": [
-      {
-        "name": "dependabot/npm_and_yarn/acorn-6.4.1",
-        "commit": {
-          "sha": "d30d65bc53d340293053f5196190ac703c3e4b2c",
-          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/d30d65bc53d340293053f5196190ac703c3e4b2c"
-        },
-        "protected": false
-      },
-      {
-        "name": "dependabot/npm_and_yarn/elliptic-6.5.3",
-        "commit": {
-          "sha": "30d2880aabee6c78fd2e5646f4d8972d51635907",
-          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/30d2880aabee6c78fd2e5646f4d8972d51635907"
-        },
-        "protected": false
-      },
-      {
-        "name": "dependabot/npm_and_yarn/handlebars-4.7.6",
-        "commit": {
-          "sha": "ee3e9b4e12181e284371ef02c722a564931850e7",
-          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/ee3e9b4e12181e284371ef02c722a564931850e7"
-        },
-        "protected": false
-      },
-      {
-        "name": "dependabot/npm_and_yarn/http-proxy-1.18.1",
-        "commit": {
-          "sha": "a934c7cc42d0c2c88d6346089f9f787802a359e6",
-          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/a934c7cc42d0c2c88d6346089f9f787802a359e6"
-        },
-        "protected": false
-      },
-      {
-        "name": "dependabot/npm_and_yarn/https-proxy-agent-2.2.4",
-        "commit": {
-          "sha": "6ce559c07e2bd311bbd78318844a82dcddcc322f",
-          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/6ce559c07e2bd311bbd78318844a82dcddcc322f"
-        },
-        "protected": false
-      },
-      {
-        "name": "dependabot/npm_and_yarn/npm-registry-fetch-4.0.5",
-        "commit": {
-          "sha": "bd87bb5b28053c1782e1f21b31f2891497347e91",
-          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/bd87bb5b28053c1782e1f21b31f2891497347e91"
-        },
-        "protected": false
-      },
-      {
-        "name": "dependabot/npm_and_yarn/websocket-extensions-0.1.4",
-        "commit": {
-          "sha": "3503b912e5e902abf5eefd1c0b17a612e996e0b8",
-          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/3503b912e5e902abf5eefd1c0b17a612e996e0b8"
-        },
-        "protected": false
-      },
-      {
-        "name": "master",
-        "commit": {
-          "sha": "3786938bbd9dfd41109e71f661129f24c3de133b",
-          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/3786938bbd9dfd41109e71f661129f24c3de133b"
-        },
-        "protected": false
-      }
-    ]
+    "default_branch": "master"
   }
 ]
