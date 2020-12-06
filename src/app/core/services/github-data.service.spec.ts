@@ -2,10 +2,11 @@ import { TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
 
 import { GithubDataService } from './github-data.service';
-import { Branch, RepositoryResponse } from '../../shared/interfaces';
+import { Branch, RepositoryResponse, RepositoryWithBranches } from '../../shared/interfaces';
 
-const repositoriesMock: RepositoryResponse[] = require('../../../mocks/repositories-mock.json');
-const branchesMock: Branch[] = require('../../../mocks/branches-mock.json');
+const repositoriesMock: RepositoryResponse[] = require('../../../mocks/repositories.mock.json');
+const branchesMock: Branch[] = require('../../../mocks/branches.mock.json');
+const repositoriesWithBranchesMock: RepositoryWithBranches[] = require('../../../mocks/repositories-with-branches.mock.json');
 
 describe('GithubDataService', () => {
   let githubDataService: GithubDataService;
@@ -22,12 +23,14 @@ describe('GithubDataService', () => {
 
   describe('getUsersRepositoriesWithBranches()', () => {
     it('should return only owned repos with branches', () => {
-      httpClientSpy.get.and.returnValue(of(repositoriesMock));
-      console.log(repositoriesMock)
+      const username = 'nieznamjs';
 
-      githubDataService.getUsersRepositoriesWithBranches('nieznamjs').subscribe(data => {
-        console.log(data);
-        expect(data).toBeTruthy()
+      httpClientSpy.get
+       .withArgs(`${githubDataService.githubApiUrl}/users/${username}/repos` as any).and.returnValue(of(repositoriesMock))
+       .withArgs('branches' as any).and.returnValue(of(branchesMock));
+
+      githubDataService.getUsersRepositoriesWithBranches(username).subscribe(data => {
+        expect(data).toEqual(repositoriesWithBranchesMock);
       });
     });
   });

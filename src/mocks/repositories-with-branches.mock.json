@@ -1,0 +1,184 @@
+[
+  {
+    "name": "counters-app",
+    "owner": {
+      "login": "nieznamjs",
+      "id": 20813056,
+      "node_id": "MDQ6VXNlcjIwODEzMDU2",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/20813056?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nieznamjs",
+      "html_url": "https://github.com/nieznamjs",
+      "followers_url": "https://api.github.com/users/nieznamjs/followers",
+      "following_url": "https://api.github.com/users/nieznamjs/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nieznamjs/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nieznamjs/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nieznamjs/subscriptions",
+      "organizations_url": "https://api.github.com/users/nieznamjs/orgs",
+      "repos_url": "https://api.github.com/users/nieznamjs/repos",
+      "events_url": "https://api.github.com/users/nieznamjs/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nieznamjs/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "fork": false,
+    "branchesUrl": "branches",
+    "branches": [
+      {
+        "name": "dependabot/npm_and_yarn/acorn-6.4.1",
+        "commit": {
+          "sha": "d30d65bc53d340293053f5196190ac703c3e4b2c",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/d30d65bc53d340293053f5196190ac703c3e4b2c"
+        },
+        "protected": false
+      },
+      {
+        "name": "dependabot/npm_and_yarn/elliptic-6.5.3",
+        "commit": {
+          "sha": "30d2880aabee6c78fd2e5646f4d8972d51635907",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/30d2880aabee6c78fd2e5646f4d8972d51635907"
+        },
+        "protected": false
+      },
+      {
+        "name": "dependabot/npm_and_yarn/handlebars-4.7.6",
+        "commit": {
+          "sha": "ee3e9b4e12181e284371ef02c722a564931850e7",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/ee3e9b4e12181e284371ef02c722a564931850e7"
+        },
+        "protected": false
+      },
+      {
+        "name": "dependabot/npm_and_yarn/http-proxy-1.18.1",
+        "commit": {
+          "sha": "a934c7cc42d0c2c88d6346089f9f787802a359e6",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/a934c7cc42d0c2c88d6346089f9f787802a359e6"
+        },
+        "protected": false
+      },
+      {
+        "name": "dependabot/npm_and_yarn/https-proxy-agent-2.2.4",
+        "commit": {
+          "sha": "6ce559c07e2bd311bbd78318844a82dcddcc322f",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/6ce559c07e2bd311bbd78318844a82dcddcc322f"
+        },
+        "protected": false
+      },
+      {
+        "name": "dependabot/npm_and_yarn/npm-registry-fetch-4.0.5",
+        "commit": {
+          "sha": "bd87bb5b28053c1782e1f21b31f2891497347e91",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/bd87bb5b28053c1782e1f21b31f2891497347e91"
+        },
+        "protected": false
+      },
+      {
+        "name": "dependabot/npm_and_yarn/websocket-extensions-0.1.4",
+        "commit": {
+          "sha": "3503b912e5e902abf5eefd1c0b17a612e996e0b8",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/3503b912e5e902abf5eefd1c0b17a612e996e0b8"
+        },
+        "protected": false
+      },
+      {
+        "name": "master",
+        "commit": {
+          "sha": "3786938bbd9dfd41109e71f661129f24c3de133b",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/3786938bbd9dfd41109e71f661129f24c3de133b"
+        },
+        "protected": false
+      }
+    ]
+  },
+  {
+    "name": "glightbox",
+    "owner": {
+      "login": "nieznamjs",
+      "id": 20813056,
+      "node_id": "MDQ6VXNlcjIwODEzMDU2",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/20813056?v=4",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/nieznamjs",
+      "html_url": "https://github.com/nieznamjs",
+      "followers_url": "https://api.github.com/users/nieznamjs/followers",
+      "following_url": "https://api.github.com/users/nieznamjs/following{/other_user}",
+      "gists_url": "https://api.github.com/users/nieznamjs/gists{/gist_id}",
+      "starred_url": "https://api.github.com/users/nieznamjs/starred{/owner}{/repo}",
+      "subscriptions_url": "https://api.github.com/users/nieznamjs/subscriptions",
+      "organizations_url": "https://api.github.com/users/nieznamjs/orgs",
+      "repos_url": "https://api.github.com/users/nieznamjs/repos",
+      "events_url": "https://api.github.com/users/nieznamjs/events{/privacy}",
+      "received_events_url": "https://api.github.com/users/nieznamjs/received_events",
+      "type": "User",
+      "site_admin": false
+    },
+    "fork": false,
+    "branchesUrl": "branches",
+    "branches": [
+      {
+        "name": "dependabot/npm_and_yarn/acorn-6.4.1",
+        "commit": {
+          "sha": "d30d65bc53d340293053f5196190ac703c3e4b2c",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/d30d65bc53d340293053f5196190ac703c3e4b2c"
+        },
+        "protected": false
+      },
+      {
+        "name": "dependabot/npm_and_yarn/elliptic-6.5.3",
+        "commit": {
+          "sha": "30d2880aabee6c78fd2e5646f4d8972d51635907",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/30d2880aabee6c78fd2e5646f4d8972d51635907"
+        },
+        "protected": false
+      },
+      {
+        "name": "dependabot/npm_and_yarn/handlebars-4.7.6",
+        "commit": {
+          "sha": "ee3e9b4e12181e284371ef02c722a564931850e7",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/ee3e9b4e12181e284371ef02c722a564931850e7"
+        },
+        "protected": false
+      },
+      {
+        "name": "dependabot/npm_and_yarn/http-proxy-1.18.1",
+        "commit": {
+          "sha": "a934c7cc42d0c2c88d6346089f9f787802a359e6",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/a934c7cc42d0c2c88d6346089f9f787802a359e6"
+        },
+        "protected": false
+      },
+      {
+        "name": "dependabot/npm_and_yarn/https-proxy-agent-2.2.4",
+        "commit": {
+          "sha": "6ce559c07e2bd311bbd78318844a82dcddcc322f",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/6ce559c07e2bd311bbd78318844a82dcddcc322f"
+        },
+        "protected": false
+      },
+      {
+        "name": "dependabot/npm_and_yarn/npm-registry-fetch-4.0.5",
+        "commit": {
+          "sha": "bd87bb5b28053c1782e1f21b31f2891497347e91",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/bd87bb5b28053c1782e1f21b31f2891497347e91"
+        },
+        "protected": false
+      },
+      {
+        "name": "dependabot/npm_and_yarn/websocket-extensions-0.1.4",
+        "commit": {
+          "sha": "3503b912e5e902abf5eefd1c0b17a612e996e0b8",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/3503b912e5e902abf5eefd1c0b17a612e996e0b8"
+        },
+        "protected": false
+      },
+      {
+        "name": "master",
+        "commit": {
+          "sha": "3786938bbd9dfd41109e71f661129f24c3de133b",
+          "url": "https://api.github.com/repos/nieznamjs/inwestuje-web/commits/3786938bbd9dfd41109e71f661129f24c3de133b"
+        },
+        "protected": false
+      }
+    ]
+  }
+]

@@ -1,19 +1,15 @@
 import { Injectable } from '@angular/core';
-import { HttpClient, HttpErrorResponse, HttpParams } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { catchError, finalize, map, mergeMap } from 'rxjs/operators';
-import { BehaviorSubject, forkJoin, Observable, of, throwError } from 'rxjs';
+import { BehaviorSubject, forkJoin, Observable, throwError } from 'rxjs';
 
-import { GithubRepositoryTypes } from '../../shared/constants';
 import { RepositoryWithBranches, Branch, RepositoryResponse, Repository } from '../../shared/interfaces';
-
-import * as mockedRepositories from '../../../mocks/repositories-mock.json';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GithubDataService {
-  private githubApiUrl = 'https://api.github.com';
-
+  public githubApiUrl = 'https://api.github.com';
   public isLoading$ = new BehaviorSubject<boolean>(false);
   public errorResponse$ = new BehaviorSubject<HttpErrorResponse | null>(null);
 
@@ -22,24 +18,16 @@ export class GithubDataService {
   public getUsersRepositoriesWithBranches(username: string): Observable<RepositoryWithBranches[]> {
     this.isLoading$.next(true);
 
-    const params = new HttpParams()
-      .set('type', GithubRepositoryTypes.owner);
-
-    // this.isLoading$.next(false);
-    // return of(mockedRepositories.default);
-
-    return this.http.get<RepositoryResponse[]>(`${this.githubApiUrl}/users/${username}/repos`, { params })
+    return this.http.get<RepositoryResponse[]>(`${this.githubApiUrl}/users/${username}/repos`)
       .pipe(
         map(this.filterForkedRepos),
         mergeMap((filteredRepos: RepositoryResponse[]) => {
+          this.errorResponse$.next(null);
           const mappedAndFilteredRepos: Repository[] = filteredRepos.map(repo => this.mapRepository(repo));
 
           return forkJoin(
             mappedAndFilteredRepos.map(repo => {
-              const correctBranchesUrl = repo.branchesUrl.split('{/')[0];
-              this.errorResponse$.next(null);
-
-              return this.getBranches(correctBranchesUrl).pipe(
+              return this.getBranches(repo.branchesUrl).pipe(
                 map(branches => ({
                   ...repo,
                   branches,
@@ -62,7 +50,7 @@ export class GithubDataService {
       fork: repositoryResponse.fork,
       name: repositoryResponse.name,
       owner: repositoryResponse.owner,
-      branchesUrl: repositoryResponse.branches_url,
+      branchesUrl: repositoryResponse.branches_url.split('{/')[0],
     };
   }
 
