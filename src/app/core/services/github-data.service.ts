@@ -9,9 +9,9 @@ import { RepositoryWithBranches, Branch, RepositoryResponse, Repository } from '
   providedIn: 'root',
 })
 export class GithubDataService {
-  public githubApiUrl = 'https://api.github.com';
-  public isLoading$ = new BehaviorSubject<boolean>(false);
-  public errorResponse$ = new BehaviorSubject<HttpErrorResponse | null>(null);
+  public readonly githubApiUrl = 'https://api.github.com';
+  public readonly isLoading$ = new BehaviorSubject<boolean>(false);
+  public readonly errorResponse$ = new BehaviorSubject<HttpErrorResponse | null>(null);
 
   constructor(private http: HttpClient) { }
 

@@ -12,7 +12,6 @@ import { RepositoryWithBranches } from '../../shared/interfaces';
   styleUrls: ['./gh-repositories.component.scss']
 })
 export class GhRepositoriesComponent implements OnInit {
-
   public repositories?: RepositoryWithBranches[];
   public isLoading$!: Observable<boolean>;
   public errorResponse$!: Observable<HttpErrorResponse | null>;

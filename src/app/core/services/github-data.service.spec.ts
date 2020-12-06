@@ -1,4 +1,3 @@
-import { TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
 
 import { GithubDataService } from './github-data.service';
@@ -13,10 +12,6 @@ describe('GithubDataService', () => {
   let httpClientSpy: { get: jasmine.Spy };
 
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      providers: [ GithubDataService ],
-    });
-
     httpClientSpy = jasmine.createSpyObj('HttpClient', [ 'get' ]);
     githubDataService = new GithubDataService(httpClientSpy as any);
   });
@@ -26,8 +21,8 @@ describe('GithubDataService', () => {
       const username = 'nieznamjs';
 
       httpClientSpy.get
-       .withArgs(`${githubDataService.githubApiUrl}/users/${username}/repos` as any).and.returnValue(of(repositoriesMock))
-       .withArgs('branches' as any).and.returnValue(of(branchesMock));
+       .withArgs(`${githubDataService.githubApiUrl}/users/${username}/repos`).and.returnValue(of(repositoriesMock))
+       .withArgs('branches').and.returnValue(of(branchesMock));
 
       githubDataService.getUsersRepositoriesWithBranches(username).subscribe(data => {
         expect(data).toEqual(repositoriesWithBranchesMock);

@@ -7,7 +7,7 @@ describe('FormsService', () => {
   let formsService: FormsService;
   let formGroup: FormGroup;
   let control: AbstractControl | null;
-  const mockUsername = 'testUser';
+  const mockedUsername = 'testUser';
 
   beforeEach(() => {
     TestBed.configureTestingModule({
@@ -15,9 +15,11 @@ describe('FormsService', () => {
     });
 
     formsService = TestBed.inject(FormsService);
+
     formGroup = new FormGroup({
-      username: new FormControl(mockUsername, Validators.required),
+      username: new FormControl(mockedUsername, Validators.required),
     });
+
     control = formGroup.get('username');
   });
 
@@ -40,6 +42,10 @@ describe('FormsService', () => {
       control?.markAsTouched();
       control?.setErrors({ required: true });
 
+      expect(formsService.hasError(formGroup, 'username', 'required')).toBe(true);
+
+      control?.markAsUntouched();
+      control?.markAsDirty();
       expect(formsService.hasError(formGroup, 'username', 'required')).toBe(true);
     });
   });
