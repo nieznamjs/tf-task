@@ -39,8 +39,8 @@ describe('FormsService', () => {
     });
 
     it('should return `true` if field is touched or dirty and has error', () => {
+      control?.patchValue(null);
       control?.markAsTouched();
-      control?.setErrors({ required: true });
 
       expect(formsService.hasError(formGroup, 'username', 'required')).toBe(true);
 
